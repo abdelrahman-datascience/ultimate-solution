@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-bs-theme="dark">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Update the 'content' attribute to reflect the actual content description -->
+    <meta name="description" content="your_description_goes_here">
+
+    <!-- Modify the 'content' attribute to include appropriate keywords -->
+    <meta name="keywords" content="your_keywords_goes_here">
+
+    <meta name="author" content="tigmatemplate">
+    <meta name="generator" content="Bootstrap">
+
+    <!-- Change the text within the <title> tag to match the webpage's content -->
+    <title>Coming Soon</title>
+
+    <!-- 
+        Set the website's favicon and Apple touch icon using the files in the assets/logo folder. You can change these files to your own icons by replacing them with the same names and sizes.
+
+        Be careful if you change the site.webmanifest file, as you need to update the src attribute of the icons array to match the new path of your icon files. Otherwise, your icons may not display correctly on some devices. 
+    -->
+
+    <link rel="manifest" href="./assets/logo/site.webmanifest">
+    <style>
+        .nav-link:hover{
+            background-color: #100430;
+          }
+        
+    </style>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./assets/libraries/glide/css/glide.core.min.css">
+    <link rel="stylesheet" href="./assets/libraries/aos/aos.css">
+    <link rel="stylesheet" href="./assets/css/main.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <!-- Update the 'title' and 'description' content below to enhance social sharing -->
+    <meta property="og:title" content="your_title_goes_here">
+    <meta property="og:description" content="your_description_goes_here">
+    <!-- Update with actual absolute image URL like: https://example.com/main.jpg -->
+    <meta property="og:image" content="your_absolute_image_url_goes_here">
+    <!-- Update with the absolute URL of the content like: https://example.com/index.html -->
+    <meta property="og:url" content="your_absolute_content_url_goes_here">
+    <!-- Update with the type of object you’re sharing. (e.g., article, website, etc.) -->
+    <meta property="og:type" content="website">
+    <!-- Defines the content language -->
+    <meta property="og:locale" content="en_US">
+
+    
+    <!-- X/Twitter Card Meta Tags for Social Sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Update with your X/Twitter handle -->
+    <meta name="twitter:site" content="@yourtwitterhandle"> 
+    <!-- Update the 'title' and 'description' content below to enhance social sharing -->
+    <meta name="twitter:title" content="your_title_goes_here"> 
+    <meta name="twitter:description" content="your_description_goes_here">
+    <!-- Update with actual absolute image URL like: https://example.com/main.jpg -->
+    <meta name="twitter:image" content="your_absolute_image_url_goes_here"> 
+    
+    <!-- 
+        The following line specifies the canonical URL for this page.
+        Replace your_canonical_url_goes_here with the actual canonical URL if needed like: https://example.com/index.html
+        Or just remove it!!!!
+    -->
+    <link rel="canonical" href="your_canonical_url_goes_here">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
+
+</head>
+<body>
+
+
+    <!-- loader-wrapper -->
+    <div class="loader-wrapper">
+        <div class="spinner-grow text-primary p-5" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+
+    <!-- header top -->
+    <div class="navigation position-absolute w-100 rounded-bottom-3 rounded-bottom-sm-4">
+        <nav class="navbar navbar-expand-xl px-2" aria-label="Offcanvas navbar large">
+            <div class="container px-3 py-2">
+                <a class="navbar-brand p-1" href="./index.html">
+                    <img class="logo-navbar" src="assets/img/logo.png" alt="logo">
+                </a>
+
+                <button class="navbar-toggler collapsed" 
+                        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                        aria-controls="offcanvasNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-bottom rounded-top-5 h-auto" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header px-4 pt-4 pb-4">
+                        <h5 class="offcanvas-title m-0" id="offcanvasNavbar2Label">
+                            <a class="navbar-brand px-2 py-1" href="javascript:;">
+                                <!-- <img src="./assets/logo/logo.png" height="32" alt="logo"> -->
+                                <strong class="text-body-emphasis fw-bolder fst-italic"> Ultimate Solution </strong>
+                            </a>
+                        </h5>
+                        <button type="button" class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav align-items-xl-center justify-content-center flex-grow-1 column-gap-4 row-gap-4">
+                            <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
+                                <a href="index.html#home"
+                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
+                                <a href="index.html#projects"
+                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                    About
+                                </a>
+                            </li>
+
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
+                                <a href="index.html#projects"
+                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                    Services
+                                </a>
+                            </li>
+
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
+                                <a href="index.html#services"
+                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                    Features
+                                </a>
+                            </li>
+
+                            <li class="nav-item" data-bs-dismiss="offcanvas">
+                                <a href="index.html#faqs"
+                                    class="nav-link rounded-3 px-3 text-base fw-semibold leading-6 text-body-emphasis bg-body-secondary-hover">
+                                    FAQs
+                                </a>
+                            </li>
+
+                            <li class="nav-item ms-xl-auto" data-bs-dismiss="offcanvas">
+                                <a href="sign.html"
+                                    class="btn btn-primary text-white btn-lg rounded-3 px-3 text-base fw-semibold leading-6 w-100">
+                                    Sign up
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- Hero -->
+    <div style="background-color: rgb(8, 8, 56); height: 850px;" id="home" class="background d-flex align-items-center position-relative">
+        <div class="glow" id="cursor-glow"></div>
+        <div class="stable-glow"></div>
+        <div class="container">
+            <div class="py-8 py-md-9 py-xl-11">
+                <div class="row gy-5 align-items-center justify-content-between">
+                    <div class="col-12 col-xl-6 text-center text-xl-start order-xl-last">
+                        <div class="max-w-2xl mx-auto mx-xl-0 py-5 py-xl-0">
+                            <span  class="badge border text-body-emphasis d-inline-flex align-items-center justify-content-between gap-2 rounded-pill fw-medium bg-body-tertiary">
+                                Exciting Things Are
+                            </span>
+
+                            <h1 class="m-0 mt-4 text-body-emphasis fw-bold tracking-tight text-6xl" data-aos-delay="0" data-aos="fade" data-aos-duration="1000">
+                                Coming Soooooooon.
+                            </h1>
+                            <p></p><br>
+                            <p></p>
+                            <p>We're thrilled to have you on our waiting list. Our team is working hard behind the scenes to bring you something amazing!</p>
+                            <p>Stay tuned and be ready to experience something truly special. We can't wait to share it with you!</p>
+                            <p>Thank you for your patience and support!</p>
+                            <div class="mt-4 pt-3" data-aos-delay="200" data-aos="fade" data-aos-duration="1000">
+                                <a href="" class="btn btn-lg btn-primary text-white text-sm fw-semibold">
+                                    Explore our social media
+                                </a>
+                                <a href="" style="margin-left: 10px; background-color: #00000093;" class="btn btn-lg btn-primary text-white text-sm fw-semibold">
+                                    Know our feautres and more about us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>	
+	<!-- Bootstrap JavaScript: Bundle with Popper -->
+	<script src="./assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libraries/glide/glide.min.js"></script>
+	<script src="./assets/libraries/aos/aos.js"></script>
+	<script src="./assets/js/scripts.js"></script>
+
+
+</body>
+</html>

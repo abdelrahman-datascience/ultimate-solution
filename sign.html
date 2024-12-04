@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/signup.css">
+
+   <title>Responsive login and registration form</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <!--=============== LOGIN IMAGE ===============-->
+   <svg class="login__blob" viewBox="0 0 566 840" xmlns="http://www.w3.org/2000/svg">
+      <mask id="mask0" mask-type="alpha">
+         <path d="M342.407 73.6315C388.53 56.4007 394.378 17.3643 391.538 
+         0H566V840H0C14.5385 834.991 100.266 804.436 77.2046 707.263C49.6393 
+         591.11 115.306 518.927 176.468 488.873C363.385 397.026 156.98 302.824 
+         167.945 179.32C173.46 117.209 284.755 95.1699 342.407 73.6315Z"/>
+      </mask>
+
+      <g mask="url(#mask0)">
+         <path d="M342.407 73.6315C388.53 56.4007 394.378 17.3643 391.538 
+         0H566V840H0C14.5385 834.991 100.266 804.436 77.2046 707.263C49.6393 
+         591.11 115.306 518.927 176.468 488.873C363.385 397.026 156.98 302.824 
+         167.945 179.32C173.46 117.209 284.755 95.1699 342.407 73.6315Z"/>
+
+         <!-- Insert your image (recommended size: 1000 x 1200) -->
+         <image class="login__img" href="assets/img/bg-login.png"/>
+      </g>
+   </svg>      
+
+   <!--=============== LOGIN ===============-->
+   <div class="login container grid" id="loginAccessRegister">
+      <!--===== LOGIN ACCESS =====-->
+      <div class="login__access">
+         <h1 class="login__title">Log in to your account.</h1>
+         
+         <div class="login__area">
+            <form id="loginForm" class="login__form">
+               <div class="login__content grid">
+                  <div class="login__box">
+                     <input type="email" id="email" required placeholder=" " class="login__input">
+                     <label for="email" class="login__label">Email</label>
+         
+                     <i class="ri-mail-fill login__icon"></i>
+                  </div>
+      
+                  <div class="login__box">
+                     <input type="password" id="password" required placeholder=" " class="login__input">
+                     <label for="password" class="login__label">Password</label>
+         
+                     <i class="ri-eye-off-fill login__icon login__password" id="loginPassword"></i>
+                  </div>
+               </div>
+      
+               <a href="#" class="login__forgot">Forgot your password?</a>
+      
+               <button type="submit" class="login__button">Login</button>
+            </form>
+
+            <p class="login__switch">
+               Don't have an account? 
+               <button id="loginButtonRegister">Create Account</button>
+            </p>
+         </div>
+      </div>
+
+      <!--===== LOGIN REGISTER =====-->
+      <div class="login__register">
+         <h1 class="login__title">Create new account.</h1>
+
+         <div class="login__area">
+            <form id="registerForm" class="login__form">
+               <div class="login__content grid">
+                  <div class="login__group grid">
+                     <div class="login__box">
+                        <input type="text" id="names" required placeholder=" " class="login__input">
+                        <label for="names" class="login__label">Full Name</label>
+
+                        <i class="ri-id-card-fill login__icon"></i>
+                     </div>
+
+                     <div class="login__box">
+                        <input type="text" id="startup" required placeholder=" " class="login__input">
+                        <label for="startup" class="login__label">Startup Name</label>
+
+                        <i class="ri-id-card-fill login__icon"></i>
+                     </div>
+                  </div>
+
+                  <div class="login__box">
+                     <input type="text" id="phone" required placeholder=" " class="login__input">
+                     <label for="phone" class="login__label">Phone Number</label>
+
+                     <i class="ri-phone-fill login__icon"></i>
+                  </div>
+                  <div class="login__box">
+                     <input type="text" id="job" required placeholder=" " class="login__input">
+                     <label for="job" class="login__label">Job Title</label>
+
+                     <i class="fa-solid fa-user login__icon"></i>
+                  </div>
+                  <div class="login__box">
+                     <input type="text" id="industry" required placeholder=" " class="login__input">
+                     <label for="industry" class="login__label">Industry</label>
+
+                     <i class="fa-solid fa-industry login__icon"></i>
+                   </div>
+                  <div class="login__box">
+                     <input type="email" id="emailCreate" required placeholder=" " class="login__input">
+                     <label for="emailCreate" class="login__label">Email</label>
+
+                     <i class="ri-mail-fill login__icon"></i>
+                  </div>
+
+                  <div class="login__box">
+                     <input type="password" id="passwordCreate" required placeholder=" " class="login__input">
+                     <label for="passwordCreate" class="login__label">Password</label>
+
+                     <i class="ri-eye-off-fill login__icon login__password" id="loginPasswordCreate"></i>
+                  </div>
+               </div>
+
+               <button type="submit" class="login__button">Create account</button>
+            </form>
+
+            <p class="login__switch">
+               Already have an account? 
+               <button id="loginButtonAccess">Log In</button>
+            </p>
+         </div>
+      </div>
+   </div>
+   
+   <!--=============== MAIN JS ===============-->
+   <script>
+    // Simulate a JSON file stored locally
+    const fileKey = "usersData"; // Key to store the users in localStorage
+ 
+    // Load existing users from localStorage
+    function loadUsers() {
+       const data = localStorage.getItem(fileKey);
+       return data ? JSON.parse(data) : {}; // Return an empty object if no data exists
+    }
+ 
+    // Save updated users to localStorage
+    function saveUsers(users) {
+       localStorage.setItem(fileKey, JSON.stringify(users));
+    }
+ 
+    // Register Form Submission
+    document.getElementById("registerForm").addEventListener("submit", function (event) {
+       event.preventDefault();
+ 
+       // Get input values
+       const names = document.getElementById("names").value;
+       const startup = document.getElementById("startup").value;
+       const phone = document.getElementById("phone").value;
+       const job = document.getElementById("job").value;
+       const industry = document.getElementById("industry").value;
+       const email = document.getElementById("emailCreate").value;
+       const password = document.getElementById("passwordCreate").value;
+ 
+       // Load existing users
+       const users = loadUsers();
+ 
+       // Check if user already exists
+       if (users[email]) {
+          alert("Email already registered. Please use a different email.");
+          return;
+       }
+ 
+       // Add new user
+       users[email] = {
+          name: names,
+          startup,
+          phone,
+          job,
+          industry,
+          password, // NOTE: Passwords should be hashed in real-world applications
+       };
+ 
+       // Save updated users
+       saveUsers(users);
+ 
+       alert("Registration successful! You are on the waitlist");
+       window.location.href = "home.html"; // Redirect to home.html
+       document.getElementById("registerForm").reset();
+    });
+ 
+    // Login Form Submission
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+       event.preventDefault();
+ 
+       // Get input values
+       const email = document.getElementById("email").value;
+       const password = document.getElementById("password").value;
+ 
+       // Load existing users
+       const users = loadUsers();
+ 
+       // Check if user exists and password matches
+       if (users[email] && users[email].password === password) {
+          alert(`Welcome, ${users[email].name}! You have successfully logged in.`);
+          console.log(`Welcome again! ${name}`)
+
+          window.location.href = "home.html"; // Redirect to home.html
+       } else if (users[email]) {
+          alert("Incorrect password. Please try again.");
+       } else {
+          alert("No account found with this email. Please register first.");
+       }
+ 
+       document.getElementById("loginForm").reset();
+    });
+ </script>
+<script src="assets/js/main.js" ></script>
+</body>
+</html>
