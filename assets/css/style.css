@@ -776,6 +776,13 @@ p {
   }
 }
 
+.calltoactionBtn {
+  padding: 14px 50px !important; 
+  border-radius: 50px; 
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+
 /* Tablets (Landscape and Portrait) */
 @media (max-width: 1024px) {
   .planItem__container {
@@ -793,6 +800,10 @@ p {
 
   .plansHero__subtitle {
     font-size: 16px;
+  }
+  .calltoactionBtn {
+    margin-bottom: 10px;
+
   }
 }
 
@@ -821,6 +832,10 @@ p {
   .button {
     font-size: 12px;
     padding: 8px 16px;
+  }
+  .calltoactionBtn {
+    padding: 10px 20px !important;
+    margin-bottom: 10px;
   }
 }
 
@@ -856,3 +871,9 @@ p {
     padding: 3px 10px;
   }
 }
+
+
+@media (max-width: 320px) {
+  .calltoactionBtn {
+    padding: 0px;
+  }}
